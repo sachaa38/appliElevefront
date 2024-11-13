@@ -103,6 +103,7 @@ function Connexion() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                autocomplete="current-password"
               />
             </div>
             <button type="submit">Se connecter</button>
