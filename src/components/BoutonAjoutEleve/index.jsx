@@ -120,6 +120,8 @@ function Modal({ addStudent }) {
       scheduledClasses: 0,
     }
 
+    console.log(newStudent)
+
     try {
       // Envoie la requête POST à l'API
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/eleve`, {
