@@ -29,7 +29,7 @@ function Note({ id }) {
     }
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/eleve/${id}/note`,
+        `${import.meta.env.VITE_API_URL}/api/eleve/${id}/note`,
         {
           method: 'POST',
           headers: {
@@ -61,7 +61,7 @@ function Note({ id }) {
   const fetchNote = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/eleve/${id}/note`,
+        `${import.meta.env.VITE_API_URL}/api/eleve/${id}/note`,
         {
           method: 'GET',
           headers: {
@@ -103,7 +103,7 @@ function Note({ id }) {
     if (confirm) {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/eleve/${id}/note/${noteId}`,
+          `${import.meta.env.VITE_API_URL}/api/eleve/${id}/note/${noteId}`,
           {
             method: 'DELETE',
             headers: {

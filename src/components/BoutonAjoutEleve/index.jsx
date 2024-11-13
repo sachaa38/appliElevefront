@@ -13,7 +13,7 @@ function BoutonAjoutEleve() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/eleve`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/eleve`, {
           method: 'GET',
           headers: {
             Authorization: 'Bearer ' + localStorage.getItem('token'),
@@ -122,7 +122,7 @@ function Modal({ addStudent }) {
 
     try {
       // Envoie la requête POST à l'API
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/eleve`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/eleve`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

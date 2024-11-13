@@ -41,7 +41,7 @@ function Eleve() {
       try {
         console.log('API URL :', import.meta.env.VITE_API_URL) // Devrait afficher l'URL
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/eleve/${id}`,
+          `${import.meta.env.VITE_API_URL}/api/eleve/${id}`,
           {
             method: 'GET',
             headers: {
@@ -82,7 +82,7 @@ function Eleve() {
     if (confirm) {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/eleve/${id}`,
+          `${import.meta.env.VITE_API_URL}/api/eleve/${id}`,
           {
             method: 'DELETE',
             headers: {
@@ -122,7 +122,7 @@ function Eleve() {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/eleve/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/eleve/${id}`,
         {
           method: 'PUT',
           headers: {
@@ -165,7 +165,7 @@ function Eleve() {
     }
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/eleve/${id}/courses`,
+        `${import.meta.env.VITE_API_URL}/api/eleve/${id}/courses`,
         {
           method: 'POST',
           headers: {
@@ -195,7 +195,7 @@ function Eleve() {
   const fetchCourses = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/eleve/${id}/courses`,
+        `${import.meta.env.VITE_API_URL}/api/eleve/${id}/courses`,
         {
           method: 'GET',
           headers: {
@@ -237,7 +237,7 @@ function Eleve() {
     if (confirm) {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/eleve/${id}/courses/${coursId}`,
+          `${import.meta.env.VITE_API_URL}/api/eleve/${id}/courses/${coursId}`,
           {
             method: 'DELETE',
             headers: {
@@ -267,7 +267,7 @@ function Eleve() {
   const handleCanceledCours = async (coursId) => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/eleve/${id}/courses/${coursId}?action=cancel`,
+        `${import.meta.env.}/eleve/${id}/courses/${coursId}?action=cancel`,
         {
           method: 'DELETE',
           headers: {
@@ -296,7 +296,7 @@ function Eleve() {
   const handleDoneCours = async (coursId) => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/eleve/${id}/courses/${coursId}`,
+        `${import.meta.env.VITE_API_URL}/api/eleve/${id}/courses/${coursId}`,
         {
           method: 'PUT', // Utilisez PATCH ou PUT selon vos besoins
           headers: {
