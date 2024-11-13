@@ -1,0 +1,60 @@
+@use '../../index.scss' as *;
+
+.nav {
+  background-color: $background;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px;
+  text-align: center;
+  & h2 {
+    color: $color1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0px;
+  }
+}
+
+.navSpanStats {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+#CoursSpanNav {
+  background-color: $color2;
+  padding: 10px 20px;
+  color: $txt1;
+  display: flex;
+  align-items: center;
+  border: 1px $color1 solid;
+  border-radius: 5px;
+  gap: 20px;
+  & span {
+    padding: 5px 15px;
+    color: $color3;
+    font-weight: bold;
+  }
+}
+
+[data-theme='dark'] {
+  .nav {
+    background-color: $dark-background;
+    & h2 {
+      color: $dark-color1;
+    }
+  }
+  #CoursSpanNav {
+    background-color: $dark-color2;
+    color: $dark-txt1;
+    border: 1px $dark-color1 solid;
+    & span {
+      color: $dark-color3;
+    }
+  }
+}

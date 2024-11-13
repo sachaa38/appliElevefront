@@ -1,0 +1,93 @@
+@use '../../index.scss' as *;
+
+.divNote {
+  max-height: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px $color1 solid;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.headerNote {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 15px;
+  & button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border-radius: 3px;
+    transition: 250ms ease;
+    & :hover {
+      transform: scale(1.1);
+      transition: 250ms ease;
+    }
+  }
+  & h2 {
+    margin: 0;
+    font-size: 32px;
+    color: $txt1;
+  }
+}
+
+.textAreaAndButton {
+  display: flex;
+  flex-direction: column;
+  & button {
+    margin-top: 15px;
+  }
+}
+
+.contentNote {
+  max-height: 500px; // définissez une hauteur maximale selon vos besoins
+  overflow-y: auto;
+  margin-bottom: 16px;
+  padding: 15px;
+}
+
+.cardNote {
+  position: relative;
+  background-color: #007bff;
+  padding: 5px 20px;
+  max-width: 100%;
+  word-wrap: break-word;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  & button {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+[data-theme='dark'] {
+  .divNote {
+    border: 1px $dark-color1 solid;
+  }
+
+  .headerNote {
+  }
+  & h2 {
+    color: $dark-txt1;
+  }
+
+  .cardNote {
+    position: relative;
+    background-color: $dark-color1;
+  }
+}

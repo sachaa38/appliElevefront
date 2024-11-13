@@ -1,0 +1,50 @@
+@use '../../index.scss' as *; // Assurez-vous que le chemin est correct
+
+.divEleveCalendrier {
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--background-color); // Couleur de fond par défaut
+  color: var(--text-color); // Couleur du texte par défaut
+}
+
+.monBouton {
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  background-color: var(--accent-color); // Utilisation de la couleur d'accent
+  color: white; // Couleur du texte
+  width: 80px;
+  height: 30px;
+  border: none;
+  transition: 250ms ease;
+  font-weight: bold;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background-color: $dark-color1; // Couleur d'accent assombrie directement
+    color: var(--background-color); // Changer la couleur du texte au survol
+    transition: 250ms ease;
+  }
+}
+
+// Styles pour le thème sombre
+[data-theme='dark'] {
+  .divEleveCalendrier {
+    background-color: var(--background-color); // Couleur de fond en mode sombre
+    color: var(--text-color); // Couleur du texte en mode sombre
+  }
+
+  .monBouton {
+    background-color: $dark-color1; // Fond du bouton en mode sombre
+    color: $dark-txt1; // Couleur du texte en mode sombre
+
+    &:hover {
+      background-color: $dark-color3; // Couleur d'accent au survol en mode sombre
+      color: var(
+        --dark-background
+      ); // Couleur du texte au survol en mode sombre
+    }
+  }
+}

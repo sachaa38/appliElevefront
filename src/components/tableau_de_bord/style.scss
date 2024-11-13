@@ -1,0 +1,76 @@
+@use '../../index.scss' as *;
+
+.tableau-de-bord {
+  background-color: $background;
+  width: 70%;
+  height: 600px;
+  text-align: center;
+  border-radius: 15px;
+  margin-left: 30px;
+  margin-top: 18px;
+  overflow-y: auto;
+  & h1 {
+    margin-top: 0;
+    color: $txt1;
+  }
+}
+.TDBContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.divTDB {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.divName {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-width: 150px;
+}
+.btnName {
+  color: white;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px $color2 solid;
+  padding: 0.6em 1.2em;
+  color: $color1;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.btnName:hover {
+  border-color: #dbeaff;
+  transition: border-color 0.25s;
+}
+
+[data-theme='dark'] {
+  .tableau-de-bord {
+    background-color: $dark-color2;
+    & h1 {
+      color: $dark-txt1;
+    }
+  }
+
+  .btnName {
+    border: 1px $dark-color2 solid;
+    color: $dark-color1;
+    background-color: $dark-background;
+  }
+
+  .btnName:hover {
+    border-color: #dbeaff;
+  }
+}

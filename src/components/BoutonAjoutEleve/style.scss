@@ -1,0 +1,65 @@
+@use '../../index.scss' as *;
+
+.btnAjoutEleve {
+  width: 100px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  background-color: $color1;
+  color: white;
+  border-radius: 10px;
+  border: white;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.btnAjoutEleve .plusIcon {
+  transition: 250ms ease;
+}
+
+.btnAjoutEleve:hover .plusIcon {
+  transform: rotate(45deg);
+  transition: 250ms ease;
+}
+.btnAjoutEleve.clicked .plusIcon {
+  transform: rotate(90deg);
+  transition: 250ms ease;
+}
+
+.form div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form label {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.form input {
+  text-align: center;
+  height: 28px;
+}
+
+.formSubmit {
+  margin-top: 15px;
+  width: 150px;
+  background-color: #1d36f6;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: 150ms ease;
+}
+
+.formSubmit:hover {
+  background-color: #14296d;
+  color: white;
+  transition: 150ms ease;
+}
+
+[data-theme='dark'] {
+  .btnAjoutEleve {
+    background-color: $dark-color1;
+  }
+}

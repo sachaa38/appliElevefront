@@ -1,0 +1,14 @@
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageFormat {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 600px;
+  width: 100%;
+  margin-top: 25px;
+}

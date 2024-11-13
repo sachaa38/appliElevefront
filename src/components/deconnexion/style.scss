@@ -1,0 +1,23 @@
+@use '../../index.scss' as *;
+
+.buttonDeco {
+  font-size: 1rem;
+  background-color: $color3; // couleur rouge personnalisée
+  color: #ffffff; // texte en blanc
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); // ombre de base
+  min-width: 120px;
+  padding: 15px;
+  margin-right: 50px;
+  transition: 150ms ease;
+
+  &:hover {
+    background-color: #df9e06; // couleur au survol
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transition: 150ms ease;
+  }
+
+  &:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); // ombre plus faible au clic
+  }
+}

@@ -1,0 +1,76 @@
+// Variables de couleur
+$color1: #3a86ff;
+$dark-color1: #2560c0;
+
+$color2: #f0f4f8;
+$dark-color2: #2a2d30;
+
+$color3: #ffbe0b;
+$dark-color3: #be8f20;
+
+$txt1: #333333;
+$dark-txt1: #e0e0e0;
+
+$txt2: #6c757d;
+$dark-txt2: #b0b3b5;
+
+// Couleurs pour le mode nuit
+$background: #f9f9f9;
+$dark-background: #1e1e1e;
+
+// Thème par défaut (clair)
+:root {
+  --background-color: #{$color2}; // Utilisation de l'interpolation SCSS pour définir la variable CSS
+  --text-color: #{$txt1};
+  --accent-color: #{$color1};
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-color); // Utilisation de la variable CSS
+  background-color: var(--background-color); // Utilisation de la variable CSS
+}
+
+// Thème sombre
+[data-theme='dark'] {
+  --background-color: #{$dark-background}; // Interpolation SCSS
+  --text-color: #{$dark-txt1};
+  --accent-color: #{$dark-color3};
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+a {
+  font-weight: 500;
+  color: var(--accent-color); // Utilisation de la variable CSS pour le lien
+  text-decoration: inherit;
+  background-color: white;
+  padding: 5px 20px;
+  border-radius: 15px;
+}
+
+a:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.btnTheme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+}
