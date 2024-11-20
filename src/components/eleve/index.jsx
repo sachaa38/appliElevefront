@@ -267,7 +267,7 @@ function Eleve() {
   const handleCanceledCours = async (coursId) => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/eleve/${id}/courses/${coursId}`,
+        `${import.meta.env.VITE_API_URL}/api/eleve/${id}/courses/${coursId}/cancel`,
         {
           method: 'DELETE',
           headers: {
