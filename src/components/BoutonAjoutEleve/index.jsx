@@ -111,7 +111,6 @@ function Modal({ addStudent }) {
     const userId = getUserIdFromToken()
     const newStudent = {
       userId,
-      id: Date.now(),
       firstName,
       lastName,
       remainingClasses: Number(remainingClasses), // Assurez-vous que ce soit un nombre
@@ -119,8 +118,6 @@ function Modal({ addStudent }) {
       canceledClasses: 0,
       scheduledClasses: 0,
     }
-
-    console.log(newStudent)
 
     try {
       // Envoie la requête POST à l'API
